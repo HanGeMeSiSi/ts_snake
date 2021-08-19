@@ -1,2 +1,7 @@
-import './style/index.less';
-console.log(123);
+import './style/index.less'
+import GameControl from './moduls/GameControl/index'
+
+let gameControl = new GameControl();
+setInterval(()=>{
+    console.log(gameControl.direction);
+},100)

@@ -15,6 +15,7 @@ module.exports = {
         // 告诉webpack不是用箭头函数
         environment:{
             arrowFunction:false,
+            const:false,
         }
     },
     // 指定webpack要使用的模块

@@ -1,3 +1,87 @@
-body{
-    background-color: #0ff;
+@bg-color:#b7d4a8;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#main{
+    font: bold 20px "Courier";
+    width: 360px;
+    height: 420px;
+    background-color:@bg-color;
+    margin: 100px auto;
+    border: 10px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    #stage{
+        width: 304px;
+        height: 304px;
+        border: 2px solid black;
+        position: relative;
+        #snake{
+            &>div{
+                width: 10px;
+                height: 10px;
+                background-color: #000;
+                border: 1px solid @bg-color;
+                position: absolute;
+            }        
+
+        }
+        #food{
+            width: 10px;
+            height: 10px;
+            background-color: transparent;
+            border: 1px solid @bg-color;
+            position: absolute;
+            left: 40px;
+            top: 40px;
+            position: relative;
+            &>div{
+                background-color: black;
+                position: absolute;
+                transform: translate(-50%,-50%);
+                border-radius: 1px;
+                &:nth-child(1){
+                    width: 10px;
+                    height: 2px;
+                    top: 1px;
+                    left: 50%;
+                }
+                &:nth-child(2){
+                    width: 10px;
+                    height: 2px;
+                    bottom: -1px;
+                    left: 50%;
+                }
+                &:nth-child(3){
+                    height: 10px;
+                    width: 2px;
+                    left: 1px;
+                    top: 50%;
+                }
+                &:nth-child(4){
+                    height: 10px;
+                    width: 2px;
+                    right: -1px;
+                    top: 50%;
+                }
+                // &:nth-child(1),
+                // &:nth-child(2),
+                // &:nth-child(3),
+                // &:nth-child(4){
+                //     position: absolute;
+                //     background-color: #f00;
+                // }
+            }
+        }
+    }
+    #score_panel{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
 }
