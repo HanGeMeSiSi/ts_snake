@@ -15,7 +15,7 @@ class GameControl{
         this.snake = new Snake();
         this.food = new Food();
         this.scorePanel = new ScorePanel();
-        this.direction = 38;
+        this.direction = 39;
         this.init();
     }
 
